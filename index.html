@@ -222,6 +222,7 @@
   }
 }
 </script>
+<link rel="stylesheet" href="/index.css">
 </head>
 <body class="antialiased selection:bg-brand-cyan selection:text-black">
 
@@ -246,7 +247,7 @@
         <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-40 flex justify-center w-full max-w-[90vw]">
             <div class="dynamic-island px-4 py-2 rounded-full flex gap-4 text-[10px] font-mono font-bold text-gray-400 overflow-x-auto scrollbar-hide">
                 <a href="#hero" class="hover:text-white transition-colors whitespace-nowrap">Pony</a>
-                <a href="#core" class="hover:text-white transition-colors whitespace-nowrap" data-cn="理念" data-en="CORE">理念</a>
+                <a href="#core" class="hover:text-white transition-colors whitespace-nowrap" data-cn="个人" data-en="CORE">个人</a>
                 <a href="#skill" class="hover:text-white transition-colors whitespace-nowrap" data-cn="技能" data-en="SKILL">技能</a>
                 <a href="#exp" class="hover:text-white transition-colors whitespace-nowrap" data-cn="经历" data-en="EXP">经历</a>
                 <a href="#work" class="hover:text-white transition-colors whitespace-nowrap" data-cn="作品" data-en="WORK">作品</a>
@@ -265,7 +266,7 @@
                         <div class="absolute bottom-2 right-2 w-4 h-4 bg-green-500 rounded-full border-2 border-black animate-pulse"></div>
                     </div>
                     <!-- Updated Text Gradient: Top-Left White -> Bottom-Right Light Gray -->
-                    <h1 class="text-6xl font-bold font-mono text-gradient-hero mb-2 tracking-tight" id="hero-name">曾 强</h1>
+                    <h1 class="text-6xl font-bold font-mono text-white mb-2 tracking-tight" id="hero-name">曾 强</h1>
                     <div class="h-6 mb-4 flex items-center justify-center">
                         <span id="typewriter-text" class="text-brand-cyan font-mono text-sm tracking-widest uppercase"></span>
                         <span class="cursor-blink"></span>
@@ -316,7 +317,7 @@
                 <div class="flex justify-between items-center mb-6 relative z-10">
                     <h3 class="text-lg font-mono text-white" id="title-exp">经历</h3>
                     <button id="exp-toggle-all" class="text-[10px] font-mono text-brand-cyan border border-brand-cyan/30 px-3 py-1 rounded hover:bg-brand-cyan/10 transition-colors">
-                        [ 展开全部 ]
+                        展开全部
                     </button>
                 </div>
                 <div class="space-y-4 relative z-10" id="experience-container">
@@ -555,17 +556,118 @@
         ];
 
         const galleryImages = [
-            "https://i.ibb.co/nMZ2prKH/compressed.jpg",
-            "https://i.ibb.co/93nwyjFQ/compressed.jpg",
-            "https://i.ibb.co/RG4dYTdP/compressed-1.jpg",
-            "https://i.ibb.co/fGySmPft/compressed-seedream-4-high-res-fal-b-A-black-car-is-parke.jpg",
-            "https://i.ibb.co/4wKBKND5/compressed-see-dream4.jpg",
-            "https://i.ibb.co/b5yYTFGs/compressed-retouch-2024093020205305.jpg",
-            "https://i.ibb.co/23C3hBB1/compressed-retouch-2024093020202954.jpg",
-            "https://i.ibb.co/q3vLt0wh/compressed-retouch-2024093020200828.jpg",
-            "https://i.ibb.co/8g5Brh73/compressed-retouch-2024093020185078.jpg",
-            "https://i.ibb.co/ycKpBcwy/compressed-retouch-2024041023271366.jpg",
-            "https://i.ibb.co/fGxVVgq2/compressed-retouch-2024030112544775.jpg"
+  "https://i.ibb.co/fzs1SKtP/compressed.jpg",
+  "https://i.ibb.co/prG66rGs/compressed.jpg",
+  "https://i.ibb.co/LwbKRPB/compressed-1.jpg",
+  "https://i.ibb.co/HDhw0T2f/compressed-seedream-4-high-res-fal-b-A-black-car-is-parke.jpg",
+  "https://i.ibb.co/4wsQGtrG/compressed-see-dream4.jpg",
+  "https://i.ibb.co/RGvfr4Bs/compressed-retouch-2024093020205305.jpg",
+  "https://i.ibb.co/prsM5rzR/compressed-retouch-2024093020202954.jpg",
+  "https://i.ibb.co/hJQJmXJG/compressed-retouch-2024093020200828.jpg",
+  "https://i.ibb.co/v6cjD0Nr/compressed-retouch-2024093020185078.jpg",
+  "https://i.ibb.co/Y7vzvs1x/compressed-retouch-2024041023271366.jpg",
+  "https://i.ibb.co/JWJPNTWN/compressed-retouch-2024030112544775.jpg",
+  "https://i.ibb.co/HTCHqjPD/compressed-retouch-2024012919414161.jpg",
+  "https://i.ibb.co/0pk5h3Rc/compressed-retouch-2023071716500659.jpg",
+  "https://i.ibb.co/FLZTNtmT/compressed-retouch-2022101021113505.jpg",
+  "https://i.ibb.co/hJZbp1DG/compressed-mmexport1679835284179-2.jpg",
+  "https://i.ibb.co/5XXf75P5/compressed-mmexport1676347429109.jpg",
+  "https://i.ibb.co/8gW4wsQr/compressed-mmexport1667478647462.jpg",
+  "https://i.ibb.co/9H5M4hGd/compressed-mmexport1667139486483.jpg",
+  "https://i.ibb.co/ZzVXt27v/compressed-mmexport1666789117344.jpg",
+  "https://i.ibb.co/p6TG9CDJ/compressed-mmexport1665577080323.jpg",
+  "https://i.ibb.co/39ZS3zHV/compressed-mmexport1665486944342.jpg",
+  "https://i.ibb.co/B5PZSzqN/compressed-mmexport1663665828609.jpg",
+  "https://i.ibb.co/7dwtQVhL/compressed-mmexport1663567113446.jpg",
+  "https://i.ibb.co/SDSqf6s9/compressed-mmexport1662365711994.jpg",
+  "https://i.ibb.co/wrdtWmP6/compressed-mmexport1662089036630.jpg",
+  "https://i.ibb.co/XrjyLqdq/compressed-mmexport1661494200585.jpg",
+  "https://i.ibb.co/JWhQkyzK/compressed-mmexport1661306645553.jpg",
+  "https://i.ibb.co/RGgJnpVd/compressed-mmexport1661230124367.jpg",
+  "https://i.ibb.co/0Vy0TmfW/compressed-gemini-3-pro-image-preview-nano-banana-pro-b-A-car-was-parked-at.jpg",
+  "https://i.ibb.co/SD2N50rT/compressed-gemini-3-pro-image-preview-nano-banana-pro-a-Generate-a-vehicle-i.jpg",
+  "https://i.ibb.co/1Y82JYKk/compressed-gemini-3-pro-image-preview-nano-banana-pro-a-A-car-was-parked-at.jpg",
+  "https://i.ibb.co/nsy012Dq/compressed-gemini-3-pro-image-preview-nano-banana-pro-a-A-car-was-parked-at-1.jpg",
+  "https://i.ibb.co/rfsjv5KG/compressed-gemini-3-pro-image-preview-nano-banana-pro-a-A-black-car-parked-u.jpg",
+  "https://i.ibb.co/23MXRcFj/compressed-gemini-3-pro-image-preview-nano-banana-pro-a-A-black-car-is-parke.jpg",
+  "https://i.ibb.co/Y71wsZGf/compressed-dbfd0b132c9d8de92preview-jpeg-tplv-a9rns2rl98-image-pre-watermark-1-5.jpg",
+  "https://i.ibb.co/8DDPqLbR/compressed-d16b935ee87848eaa3a6b97041447d7b-jpeg-tplv-a9rns2rl98-image-raw.jpg",
+  "https://i.ibb.co/0yJHLjdB/compressed-banana1.jpg",
+  "https://i.ibb.co/XkfQ2jY3/compressed-banana-pro.jpg",
+  "https://i.ibb.co/84XV0xxk/compressed-Wechat-IMG528.jpg",
+  "https://i.ibb.co/LXGftxSW/compressed-Wechat-IMG527.jpg",
+  "https://i.ibb.co/YBmvGqFD/compressed-Wechat-IMG462.jpg",
+  "https://i.ibb.co/yxhm90N/compressed-Wechat-IMG461.jpg",
+  "https://i.ibb.co/7ddGFhPQ/compressed-Wechat-IMG460.jpg",
+  "https://i.ibb.co/B2tGtGkY/compressed-Wechat-IMG459.jpg",
+  "https://i.ibb.co/w17Kkmm/compressed-Wechat-IMG458.jpg",
+  "https://i.ibb.co/8nw5cCB4/compressed-Screenshot-2024-09-30-20-06-13-679-com-miui-gallery-edit.jpg",
+  "https://i.ibb.co/35p8GXp0/compressed-Screenshot-2024-09-30-20-05-27-322-com-miui-gallery-edit.jpg",
+  "https://i.ibb.co/P0BSZzd/compressed-Screenshot-2024-09-30-20-04-57-027-com-miui-gallery-edit.jpg",
+  "https://i.ibb.co/sd0JY2JL/compressed-Screenshot-2024-09-30-20-04-34-925-com-miui-gallery-edit.jpg",
+  "https://i.ibb.co/JWxGSqzS/compressed-Screenshot-2024-09-30-19-51-07-359-com-miui-gallery-edit.jpg",
+  "https://i.ibb.co/TMJ9Yd5X/compressed-Screenshot-2024-09-30-19-50-36-300-com-miui-gallery-edit.jpg",
+  "https://i.ibb.co/Kjd7LHcR/compressed-Screenshot-2024-09-30-19-50-12-255-com-miui-gallery-edit.jpg",
+  "https://i.ibb.co/4nDV2pR3/compressed-IMG-20240930-201111.jpg",
+  "https://i.ibb.co/Zz7MmGVp/compressed-IMG-20240930-201100.jpg",
+  "https://i.ibb.co/j9WVL8Qp/compressed-IMG-20240930-201050.jpg",
+  "https://i.ibb.co/xvpSxFs/compressed-IMG-20240930-201038.jpg",
+  "https://i.ibb.co/FLFjXF6f/compressed-IMG-20240930-201029.jpg",
+  "https://i.ibb.co/jZ4XvtCq/compressed-IMG-20240930-201018.jpg",
+  "https://i.ibb.co/YFTrfHgg/compressed-IMG-20240930-201009.jpg",
+  "https://i.ibb.co/DfccjLvJ/compressed-IMG-20240930-200955.jpg",
+  "https://i.ibb.co/XxBy1fMd/compressed-IMG-20240930-200945.jpg",
+  "https://i.ibb.co/QF4Ktw52/compressed-IMG-20240930-200934.jpg",
+  "https://i.ibb.co/0Rfk0RZF/compressed-IMG-20240930-195402.jpg",
+  "https://i.ibb.co/ZpxsfPTW/compressed-IMG-20240930-195346.jpg",
+  "https://i.ibb.co/FkT7qY6n/compressed-IMG-20240930-195332.jpg",
+  "https://i.ibb.co/C5YHk8h2/compressed-IMG-20240930-195317.jpg",
+  "https://i.ibb.co/RpcfMn3N/compressed-IMG-20240930-195305.jpg",
+  "https://i.ibb.co/Kp1Yk315/compressed-IMG-20221009-144255-2.jpg",
+  "https://i.ibb.co/ZzMfC6gx/compressed-65b3f11ffa4b41fc89f9699afacb97ae-jpeg-tplv-a9rns2rl98-image-raw.jpg",
+  "https://i.ibb.co/zHWcZ0Ts/compressed-4d9e880fff40415b99221d1f969989ce-jpeg-tplv-a9rns2rl98-image-raw.jpg",
+  "https://i.ibb.co/KHfm9Tf/compressed-34998323-f856b6ba15520c138924a64d5fe4c571933e09141425c450f7e49bce3c19fee8.jpg",
+  "https://i.ibb.co/s9VMRfJk/compressed-289979787-ed0d6f6636a02db901b3867a9cc24570950fbf3abc3c0bc51058a8a15b58c4cc.jpg",
+  "https://i.ibb.co/Kj0ypPGc/compressed-2335975e6597a2d56a46af1547bf275d265018111b10badb297d3896871c6c1b.jpg",
+  "https://i.ibb.co/HDftYGDJ/compressed-1766382198235.jpg",
+  "https://i.ibb.co/zWRZ0HJm/compressed-1766382198208.jpg",
+  "https://i.ibb.co/HfcXDGqh/compressed-1766382198198.jpg",
+  "https://i.ibb.co/Z1FvznFw/compressed-1766382198187.jpg",
+  "https://i.ibb.co/s9tsX4vG/compressed-1766382198176.jpg",
+  "https://i.ibb.co/vCsCvgZx/compressed-1766382198166.jpg",
+  "https://i.ibb.co/d10qYsX/compressed-1766382198156.jpg",
+  "https://i.ibb.co/xSxs5XQg/compressed-1766382198086.jpg",
+  "https://i.ibb.co/qMrDJYkB/compressed-1766382198076.jpg",
+  "https://i.ibb.co/ZpBxZXjg/compressed-1766382198048.jpg",
+  "https://i.ibb.co/xKz8QYFs/compressed-1766382198029.jpg",
+  "https://i.ibb.co/VWq5614m/compressed-1766382198019.jpg",
+  "https://i.ibb.co/mVSLmxSz/compressed-1766382197999.jpg",
+  "https://i.ibb.co/jkpyCntr/compressed-1766382197990.jpg",
+  "https://i.ibb.co/fdX4KTNd/compressed-1766382197979.jpg",
+  "https://i.ibb.co/Lh2GgTnk/compressed-1766382197960.jpg",
+  "https://i.ibb.co/Lz6f3K5q/compressed-1766382197950.jpg",
+  "https://i.ibb.co/F4sd9z46/compressed-1766382197932.jpg",
+  "https://i.ibb.co/5xzxBPHv/compressed-1766382197922.jpg",
+  "https://i.ibb.co/6RND0S6V/compressed-1766382197893.jpg",
+  "https://i.ibb.co/nsVXcc9s/compressed-1766382197873.jpg",
+  "https://i.ibb.co/JRv06pnF/compressed-1766382197861.jpg",
+  "https://i.ibb.co/vrr9Kcv/compressed-1766382197839.jpg",
+  "https://i.ibb.co/8n1x3m86/compressed-1766382197829.jpg",
+  "https://i.ibb.co/b5NTB4zJ/compressed-1766382197819.jpg",
+  "https://i.ibb.co/9P1L94D/compressed-1766382197809.jpg",
+  "https://i.ibb.co/xqRx26RM/compressed-1766382197788.jpg",
+  "https://i.ibb.co/sdfMSyRN/compressed-1766382197778.jpg",
+  "https://i.ibb.co/HfktTRdN/compressed-1766382197768.jpg",
+  "https://i.ibb.co/SDgJ1FSW/compressed-1766382197738.jpg",
+  "https://i.ibb.co/BVxNTvvD/compressed-1766382197675.jpg",
+  "https://i.ibb.co/Jj9Fc9SK/compressed-1766382197646.jpg",
+  "https://i.ibb.co/qfBLf73/compressed-1766382197636.jpg",
+  "https://i.ibb.co/BHyv7RFC/compressed-1766382197627.jpg",
+  "https://i.ibb.co/bjVnHLNQ/compressed-1766382197618.jpg",
+  "https://i.ibb.co/Ld8ycfVS/compressed-1766382197609.jpg",
+  "https://i.ibb.co/TxrKjPtt/compressed-1766382197599.jpg",
+  "https://i.ibb.co/zWDjh3G1/compressed-1766382197570.jpg",
+  "https://i.ibb.co/zHS0mvTq/compressed-1766382197715.jpg" 
         ];
 
         // --- STATE & LOGIC ---
@@ -1132,5 +1234,6 @@
             animate();
         }
     </script>
+<script type="module" src="/index.tsx"></script>
 </body>
 </html>
